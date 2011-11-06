@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import com.atlassian.jira.rpc.soap.client.JiraSoapService;
 import com.atlassian.jira.rpc.soap.client.RemoteAuthenticationException;
@@ -24,7 +24,7 @@ import com.atlassian.jira.rpc.soap.client.RemotePermissionException;
 
 public class SOAPClient {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(SOAPClient.class);
+	private static final Log LOGGER = LogFactory.getLog(SOAPClient.class);
 	private static final int MAX_NUMBER_OF_ISSUES_RETURNED = 1000;
 
 	public SOAPSession connect(String jiraSoapWsUrl, String userName, String password) {
